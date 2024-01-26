@@ -10,7 +10,6 @@ const Navbar = () => {
       <div className={styles['nav-link-wrapper']}>
         <Link to="/">Home</Link>
         <Link to="/items">Shop</Link>
-        <Link to="/checkout">Checkout</Link>
       </div>
     </nav>
   )

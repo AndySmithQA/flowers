@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { CartProvider } from "./context/cart"
+
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
 import ItemsPage from "./pages/ItemsPage"
-import CheckoutPage from "./pages/CheckoutPage"
+
 
 
 function App() {
@@ -17,18 +17,18 @@ function App() {
   }, [])
 
   return (
-    <CartProvider itemsData={itemsData}>
+
       <BrowserRouter>
         <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/items" element={<ItemsPage itemsData={itemsData} />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
+     
           </Routes>
         </main>
       </BrowserRouter>
-    </CartProvider>
+
   )
 }
 
